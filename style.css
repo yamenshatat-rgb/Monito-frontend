@@ -1,0 +1,197 @@
+@font-face {
+    font-family: 'SVN-Gilroy-Bold';
+    src: url(fonts/fonts/fonnts.com-SVNGilroy-Bold.otf);
+}
+
+@font-face {
+    font-family: 'SVN-Gilroy-Medium';
+    src: url(fonts/fonts/fonnts.com-SVNGilroy-Light.otf);
+}
+
+
+body {
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+header {
+    position: relative;
+    padding-top: 2.938rem;
+    width: 25.875rem;
+    height: 49.625rem;
+    background: linear-gradient(102.87deg, #FCEED5 6.43%, #FCEED5 78.33%, #FFE7BA 104.24%);
+}
+
+.header-shape1 {
+    position: absolute;
+    width: 39.688rem;
+    height: 39.688rem;
+    top: -36.688rem;
+    left: -16.563rem;
+    transform: rotate(19.42deg);
+    opacity: 1;
+    border-radius: 3.813rem;
+    z-index: 1;
+    background-color: #F7DBA7;
+}
+
+.header-shape2 {
+    position: absolute;
+    width: 12.437232260085263px;
+    height: 12.437232260085263px;
+    top: 210.96px;
+    left: 303px;
+    transform: rotate(-30.59deg);
+    opacity: 1;
+    border-radius: 4px;
+    background-color: #002A48;
+    z-index: 2;
+}
+
+.header-shape3 {
+    position: absolute;
+    width: 15.928379833008748px;
+height: 15.928379833008748px;
+top: 205px;
+left: 304.41px;
+transform: rotate(-9.62deg);
+opacity: 1;
+border-radius: 4px;
+background-color: #F7DBA7;
+}
+
+.header-shape4 {
+    position: absolute;
+    width: 14.626361325109643px;
+height: 14.626361325109643px;
+top: 180px;
+left: 349px;
+transform: rotate(20.79deg);
+opacity: 1;
+border-radius: 4px;
+background-color: #F7DBA7;
+
+}
+
+nav {
+    height: 3.563rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-menu {
+    width: 2rem;
+    height: 2rem;
+    margin-left: 0.625rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    background-color: transparent;
+}
+
+
+.header-logo {
+    z-index: 2;
+}
+
+.header-search {
+    width: 1.7rem;
+    height: 1.7rem;
+    margin-right: 0.875rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    background-color: transparent;
+}
+
+
+.header-hero h1 {
+    position: relative;
+    width: 22.313rem;
+    height: 3.75rem;
+    margin: 1.65rem 0 0 1rem;
+    font-family: SVN-Gilroy-Bold;
+    font-weight: 800;
+    font-size: 2.875rem;
+    line-height: 3.75rem;
+    text-transform: capitalize;
+    color: #002A48;
+}
+
+.header-hero h2 {
+    width: 17.188rem;
+    height: 2.375rem;
+    padding: 0;
+    margin: 0 0 0 1rem;
+    font-family: SVN-Gilroy-Bold;
+    font-weight: 700;
+    font-size: 1.75rem;
+    line-height: 2.375rem;
+    text-transform: capitalize;
+    color: #002A48;
+}
+
+.header-hero p {
+    width: 23.875rem;
+    height: 3.375rem;
+    margin: 0.75rem 0 0 1rem;
+    font-family: SVN-Gilroy-Medium;
+    font-weight: 500;
+    font-size: 0.75rem;
+    line-height: 1.125rem;
+}
+
+.header-buttons {
+    display: flex;
+    gap: 1rem;
+    margin: 2rem 0 0 1rem;
+}
+
+.header-intro {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    width: 10.063rem;
+    height: 3rem;
+    border-radius: 3.563rem;
+    border: 0.094rem solid #003459;
+    background-color: transparent;
+
+
+    font-family: SVN-Gilroy-Medium;
+    font-weight: 500;
+    font-size: 1rem;
+    line-height: 1.5rem;
+    vertical-align: bottom;
+    color: #003459;
+}
+
+.header-intro img {
+    width: 1.125rem;
+    height: 1.125rem;
+    border-radius: 50%;
+    border: 0.094rem solid #003459;
+    margin-left: 0.5rem;
+}
+
+.header-explore {
+    width: 10.188rem;
+    height: 3rem;
+    border-radius: 3.563rem;
+    border: none;
+    background-color: #003459;
+    color: #FDFDFD;
+
+}
+
+.hero-img {
+    margin-top: 1.563rem;
+}

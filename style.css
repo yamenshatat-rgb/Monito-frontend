@@ -15,79 +15,58 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-
 }
+
+/* ------ Header ------ */
 
 header {
     position: relative;
+    overflow: hidden;
     padding-top: 2.938rem;
-    width: 25.875rem;
-    height: 49.625rem;
+    width: 100%;
+    max-width: 1440px;
+    height: 46.688rem;
     background: linear-gradient(102.87deg, #FCEED5 6.43%, #FCEED5 78.33%, #FFE7BA 104.24%);
-}
-
-.header-shape1 {
-    position: absolute;
-    width: 39.688rem;
-    height: 39.688rem;
-    top: -36.688rem;
-    left: -16.563rem;
-    transform: rotate(19.42deg);
-    opacity: 1;
-    border-radius: 3.813rem;
-    z-index: 1;
-    background-color: #F7DBA7;
-}
-
-.header-shape2 {
-    position: absolute;
-    width: 12.437232260085263px;
-    height: 12.437232260085263px;
-    top: 210.96px;
-    left: 303px;
-    transform: rotate(-30.59deg);
-    opacity: 1;
-    border-radius: 4px;
-    background-color: #002A48;
-    z-index: 2;
-}
-
-.header-shape3 {
-    position: absolute;
-    width: 15.928379833008748px;
-height: 15.928379833008748px;
-top: 205px;
-left: 304.41px;
-transform: rotate(-9.62deg);
-opacity: 1;
-border-radius: 4px;
-background-color: #F7DBA7;
-}
-
-.header-shape4 {
-    position: absolute;
-    width: 14.626361325109643px;
-height: 14.626361325109643px;
-top: 180px;
-left: 349px;
-transform: rotate(20.79deg);
-opacity: 1;
-border-radius: 4px;
-background-color: #F7DBA7;
-
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 0 0 1.25rem 1.25rem;
 }
 
 nav {
-    height: 3.563rem;
+    position: relative;
+    width: 25.875rem;
+    height: 3.5625rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-.header-menu {
-    width: 2rem;
-    height: 2rem;
-    margin-left: 0.625rem;
+.header-logo-buttons a,
+.header-join-section,
+.header-logo-buttons .header-logo,
+.hero-img-desktop,
+.header-shape7,
+.header-shape8,
+.pet-gene-age>span,
+.view-more-btn-desktop,
+.products,
+.pet-sellers,
+.adoption {
+    display: none;
+}
+
+.header-logo-buttons {
+    display: flex;
+}
+
+.header-hero {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.icon-btn {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -95,20 +74,30 @@ nav {
     background-color: transparent;
 }
 
-
-.header-logo {
-    z-index: 2;
+.header-menu {
+    width: 2rem;
+    height: 2rem;
+    margin-left: .625rem;
 }
 
 .header-search {
     width: 1.7rem;
     height: 1.7rem;
-    margin-right: 0.875rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border: none;
-    background-color: transparent;
+    margin-right: .875rem;
+}
+
+.header-logo {
+    z-index: 2;
+}
+
+.hero-img-mobile {
+    display: block;
+    max-width: 100%;
+    /* responsive */
+    height: auto;
+    z-index: 2;
+    margin-top: 2.5rem;
+    position: relative;
 }
 
 
@@ -116,13 +105,14 @@ nav {
     position: relative;
     width: 22.313rem;
     height: 3.75rem;
-    margin: 1.65rem 0 0 1rem;
+    margin: 3.2rem 0 0 1rem;
     font-family: SVN-Gilroy-Bold;
     font-weight: 800;
     font-size: 2.875rem;
     line-height: 3.75rem;
     text-transform: capitalize;
     color: #002A48;
+    z-index: 2;
 }
 
 .header-hero h2 {
@@ -141,20 +131,20 @@ nav {
 .header-hero p {
     width: 23.875rem;
     height: 3.375rem;
-    margin: 0.75rem 0 0 1rem;
+    margin: .75rem 0 0 1rem;
     font-family: SVN-Gilroy-Medium;
     font-weight: 500;
-    font-size: 0.75rem;
+    font-size: .75rem;
     line-height: 1.125rem;
 }
 
 .header-buttons {
     display: flex;
     gap: 1rem;
-    margin: 2rem 0 0 1rem;
+    margin: 2.21rem 0 0 1rem;
 }
 
-.header-intro {
+.view-intro-btn {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -162,10 +152,8 @@ nav {
     width: 10.063rem;
     height: 3rem;
     border-radius: 3.563rem;
-    border: 0.094rem solid #003459;
+    border: .094rem solid #003459;
     background-color: transparent;
-
-
     font-family: SVN-Gilroy-Medium;
     font-weight: 500;
     font-size: 1rem;
@@ -174,24 +162,1025 @@ nav {
     color: #003459;
 }
 
-.header-intro img {
+.view-intro-btn img {
     width: 1.125rem;
     height: 1.125rem;
     border-radius: 50%;
-    border: 0.094rem solid #003459;
-    margin-left: 0.5rem;
+    border: .094rem solid #003459;
+    margin-left: .5rem;
 }
 
-.header-explore {
+.explore-now-btn {
     width: 10.188rem;
     height: 3rem;
     border-radius: 3.563rem;
     border: none;
     background-color: #003459;
     color: #FDFDFD;
+}
+
+.header-shape1 {
+    position: absolute;
+    width: 39.688rem;
+    height: 39.688rem;
+    top: -40.1rem;
+    left: -16.563rem;
+    transform: rotate(19.42deg);
+    opacity: 1;
+    border-radius: 3.813rem;
+    z-index: 1;
+    background-color: #F7DBA7;
+}
+
+.header-shape2 {
+    position: absolute;
+    width: .777rem;
+    height: .777rem;
+    top: 7.685rem;
+    left: 18.938rem;
+    transform: rotate(-30.59deg);
+    opacity: 1;
+    border-radius: .25rem;
+    background-color: #002A48;
+    z-index: 2;
+}
+
+.header-shape3 {
+    position: absolute;
+    width: .996rem;
+    height: .996rem;
+    top: 7.375rem;
+    left: 19.026rem;
+    transform: rotate(-9.62deg);
+    opacity: 1;
+    border-radius: .25rem;
+    background-color: #F7DBA7;
+}
+
+.header-shape4 {
+    position: absolute;
+    width: .914rem;
+    height: .914rem;
+    top: 4.8rem;
+    left: 21.813rem;
+    transform: rotate(20.79deg);
+    opacity: 1;
+    border-radius: .25rem;
+    background-color: #F7DBA7;
+}
+
+.header-shape5 {
+    position: absolute;
+    width: 33.061rem;
+    height: 33.061rem;
+    top: 26.625rem;
+    left: 5.438rem;
+    transform: rotate(25.23deg);
+    opacity: 1;
+    z-index: 1;
+    border-radius: 3rem;
+    background-color: #F7DBA7;
+}
+
+.header-shape6 {
+    position: absolute;
+    width: 33.061rem;
+    height: 33.061rem;
+    top: 27.6rem;
+    left: 2.421rem;
+    transform: rotate(5.37deg);
+    opacity: 1;
+    border-radius: 3rem;
+    background-color: #003459;
+}
+
+/* ------ Our Pets Section ------ */
+.our-pets {
+    width: 100%;
+    max-width: 73.75rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.our-pets-title p {
+    font-family: SVN-Gilroy-Medium;
+    font-weight: 500;
+    font-size: .875rem;
+    line-height: 1.25rem;
+    margin: 2.5rem 0 0 1rem;
+
 
 }
 
-.hero-img {
-    margin-top: 1.563rem;
+.our-pets-title h2 {
+    margin: .125rem 0 0 1rem;
+    font-family: SVN-Gilroy-Bold;
+    font-weight: 700;
+    font-size: 1.25rem;
+    line-height: 2rem;
+    text-transform: capitalize;
+    width: 19.125rem;
+    height: 2rem;
+    color: #003459;
+}
+
+.pets-lists {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 1.25rem 1rem 1rem 1rem;
+    gap: .75rem;
+}
+
+.pets-lists>div {
+
+    border-radius: .75rem;
+    box-shadow: 0rem .25rem 1.75rem -0.125rem #00000014;
+    width: 11.5625rem;
+    height: 19.8125rem;
+}
+
+.pets-lists>div>div img {
+    width: calc(100% - 1rem);
+    height: auto;
+    display: block;
+    object-fit: cover;
+    margin: .5rem .5rem 0 .5rem;
+    border-radius: .625rem;
+}
+
+.pets-lists div h3 {
+    font-family: SVN-Gilroy-Bold;
+    font-weight: 700;
+    font-size: .875rem;
+    line-height: 1.25rem;
+    vertical-align: bottom;
+    margin: .5rem .75rem 0 .75rem;
+}
+
+.pet-gene,
+.pet-age {
+    font-family: SVN-Gilroy-Medium;
+    font-weight: 500;
+    font-size: .75rem;
+    line-height: 1.125rem;
+    margin: .25rem .75rem 0 .75rem;
+    color: #667479;
+}
+
+.pet-gene span,
+.pet-age span {
+    font-family: SVN-Gilroy-Bold;
+    font-weight: 700;
+    line-height: 1.125rem;
+    color: #667479;
+}
+
+.pet-price {
+    font-family: SVN-Gilroy-Bold;
+    font-weight: 700;
+    font-size: 1rem;
+    line-height: 1.5rem;
+    margin: .5rem .75rem .25rem .75rem;
+}
+
+.pets-view-more-btn-mobile {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: .5rem;
+    opacity: 1;
+    border-radius: 3.5625rem;
+    align-self: center;
+    border: .0938rem solid #003459;
+    background-color: transparent;
+    font-family: SVN-Gilroy-Meduim;
+    font-weight: 500;
+    width: 23.875rem;
+    height: 3rem;
+    padding: .875rem 1.75rem .625rem 1.75rem;
+    font-size: 1rem;
+    line-height: 1.5rem;
+    margin-bottom: 2.5rem;
+    color: #003459;
+}
+
+/* ------ Explore Section ------ */
+
+.explore {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 23.875rem;
+    height: 40rem;
+    border-radius: 1.25rem;
+    margin: 0 auto 18.75rem;
+    overflow: hidden;
+    background: #003459;
+}
+
+.explore-shape1 {
+    position: absolute;
+    width: 37.8142rem;
+    height: 39.6875rem;
+    top: -18.8125rem;
+    left: -9.1563rem;
+    transform: rotate(11.41deg);
+    opacity: 1;
+    border-radius: 4.6875rem;
+    background-color: #FCEED5;
+    z-index: 1;
+}
+
+.explore-shape2 {
+    position: absolute;
+    width: 49.2213rem;
+    height: 49.2213rem;
+    top: 33.17rem;
+    left: -11.1425rem;
+    transform: rotate(28.25deg);
+    opacity: 1;
+    border-radius: 6.1875rem;
+    background-color: #002A48;
+    z-index: 1;
+}
+
+.explore>div>h2,
+.explore>div>h3,
+.explore>div>p,
+.explore-buttons,
+.explore>img {
+    position: relative;
+    z-index: 2;
+}
+
+.explore>div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.explore>div>h2 {
+    margin: 2rem 0 0 0;
+    font-family: SVN-Gilroy-Bold;
+    font-weight: 800;
+    font-size: 2.25rem;
+    line-height: 3.375rem;
+    text-transform: capitalize;
+    color: #002A48;
+}
+
+.explore>div>h3 {
+    font-family: SVN-Gilroy-Bold;
+    font-weight: 700;
+    font-size: 1.5rem;
+    line-height: 2.25rem;
+    text-transform: capitalize;
+    margin: 0;
+    color: #002A48;
+
+}
+
+.explore>div>p {
+    font-family: SVN-Gilroy-Medium;
+    font-weight: 500;
+    font-size: .75rem;
+    line-height: 1.125rem;
+    text-align: center;
+    color: #242B33;
+    width: 21.51rem;
+    margin: .75rem 0 2rem 0;
+}
+
+.explore-buttons {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1.4375rem;
+}
+
+.our-products {
+    display: none;
+}
+
+
+@media screen and (min-width: 1024px) {
+
+    header {
+        padding: 0;
+    }
+
+    nav {
+        width: 1440px;
+        height: 6.25rem;
+        gap: 2.25rem
+    }
+
+    .header-menu,
+    nav .header-logo,
+    .header-search,
+    .hero-img-mobile {
+        display: none;
+    }
+
+    .header-logo-buttons {
+        margin-left: 8.125rem;
+        display: flex;
+        gap: 3rem;
+        align-items: center;
+    }
+
+    .header-logo-buttons a {
+        position: relative;
+        display: block;
+        z-index: 1;
+        font-family: SVN-Gilroy-Bold;
+        font-weight: 700;
+        font-size: 1rem;
+        line-height: 1.5rem;
+        text-decoration: none;
+        color: #003459;
+    }
+
+    .header-logo-buttons .header-logo {
+        display: block;
+        width: 7.188rem;
+    }
+
+    .header-join-section {
+        display: block;
+        margin-right: 8.125rem;
+        display: flex;
+        align-items: center;
+        gap: .875rem;
+    }
+
+    .header-input {
+        display: flex;
+        align-items: center;
+        width: 17.5rem;
+        height: 2.75rem;
+        opacity: 1;
+        border-radius: 2.875rem;
+        padding-top: .75rem;
+        padding-right: 1.25rem;
+        padding-bottom: .75rem;
+        padding-left: 1rem;
+        gap: .75rem;
+        box-sizing: border-box;
+        background-color: #FDFDFD;
+    }
+
+    .header-input input::placeholder {
+        font-family: SVN-Gilroy-Medium;
+        font-weight: 500;
+        font-size: .875rem;
+        line-height: 1.25rem;
+        color: #99A2A5
+    }
+
+    .header-input input {
+        background-color: transparent;
+        border: none;
+        font-family: SVN-Gilroy-Medium;
+        font-weight: 500;
+        font-size: .875rem;
+        line-height: 1.25rem;
+    }
+
+    .header-input img {
+        width: 1.25rem;
+        height: 1.25rem;
+    }
+
+    .header-join-section button {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 12.6875rem;
+        height: 2.75rem;
+        opacity: 1;
+        border-radius: 3.5625rem;
+        padding-top: .875rem;
+        padding-right: 1.75rem;
+        padding-bottom: .625rem;
+        padding-left: 1.75rem;
+        gap: .625rem;
+        border: none;
+        background-color: #003459;
+        font-family: SVN-Gilroy-Bold;
+        font-weight: 700;
+        font-size: 1rem;
+        line-height: 1.5rem;
+        vertical-align: bottom;
+        color: #FDFDFD;
+    }
+
+    .header-currency-dropdown {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 6.5rem;
+        height: 2.75rem;
+        opacity: 1;
+        padding-top: .625rem;
+        padding-right: .5rem;
+        padding-bottom: .5rem;
+        padding-left: .5rem;
+        gap: .25rem;
+    }
+
+    .header-currency-flag {
+        margin-right: .125rem;
+    }
+
+    .header-shape1 {
+        top: -36.8rem;
+        left: -14.5rem;
+        transform: rotate(25.23deg);
+        border-radius: 6.1875rem;
+    }
+
+    .header-shape2 {
+        width: 1.3419rem;
+        height: 1.3419rem;
+        transform: rotate(43deg);
+        top: 8rem;
+        left: 45.2rem;
+        border-radius: .375rem;
+    }
+
+    .header-shape3 {
+        width: 1.7186rem;
+        height: 1.7186rem;
+        transform: rotate(22.85deg);
+        opacity: 1;
+        top: 7.5rem;
+        left: 45.4375rem;
+        border-radius: .5625rem;
+    }
+
+
+    .header-shape4 {
+        width: .9141rem;
+        height: .9141rem;
+        transform: rotate(20.79deg);
+        opacity: 1;
+        top: 4.4375rem;
+        left: 48rem;
+        border-radius: .25rem;
+    }
+
+
+    .header-shape5 {
+        width: 39.6875rem;
+        height: 39.6875rem;
+        transform: rotate(23deg);
+        opacity: 1;
+        top: 13rem;
+        left: 44rem;
+        border-radius: 6.1875rem;
+    }
+
+    .header-shape6 {
+        width: 39.6875rem;
+        height: 39.6875rem;
+        transform: rotate(9.35deg);
+        opacity: 1;
+        top: 14.89rem;
+        left: 40.99rem;
+        border-radius: 6.1875rem;
+    }
+
+    .header-shape7 {
+        display: block;
+        position: absolute;
+        width: 39.6875rem;
+        height: 39.6875rem;
+        transform: rotate(56.47deg);
+        opacity: 0.4;
+        top: 38.5rem;
+        left: 1.5rem;
+        border-radius: 6.1875rem;
+        background-color: #F7DBA7;
+    }
+
+    .header-shape8 {
+        display: block;
+        position: absolute;
+        width: 4.194rem;
+        height: 4.194rem;
+        transform: rotate(25.23deg);
+        opacity: 1;
+        top: 4.625rem;
+        left: 7.7rem;
+        border-radius: 1.25rem;
+        background: #F7DBA7;
+    }
+
+
+    .header-hero {
+        justify-content: space-between;
+        width: 1440px;
+
+    }
+
+    .header-hero h1 {
+        width: 29.0625rem;
+        height: 4.25rem;
+        opacity: 1;
+        margin-top: 5rem;
+        font-family: SVN-Gilroy-Bold;
+        font-weight: 800;
+        font-size: 3.75rem;
+        line-height: 4.25rem;
+        text-transform: capitalize;
+        margin-left: 8.125rem;
+    }
+
+    .header-hero h2 {
+        width: 28.25rem;
+        opacity: 1;
+        margin-top: .25rem;
+        font-weight: 700;
+        font-size: 2.875rem;
+        line-height: 3.75rem;
+        text-transform: capitalize;
+        margin-left: 8.125rem;
+    }
+
+    .header-hero p {
+        width: 30rem;
+        height: 4.5rem;
+        opacity: 1;
+        margin-top: 2.5rem;
+        font-weight: 500;
+        font-size: 1rem;
+        line-height: 1.5rem;
+        margin-left: 8.125rem;
+    }
+
+    .header-buttons {
+        margin-left: 0;
+    }
+
+    .view-intro-btn {
+        margin-left: 8.125rem;
+    }
+
+    .hero-img-desktop {
+        display: block;
+        position: absolute;
+        margin: 0;
+        width: 59rem;
+        height: 43.3125rem;
+        opacity: 1;
+        top: -2rem;
+        left: 32.5rem;
+        z-index: 2;
+    }
+
+    /* ------ Our Pets Section ------ */
+
+    .pets-view-more-btn-mobile {
+        display: none;
+    }
+
+    .our-pets-title p {
+        font-size: 1rem;
+        line-height: 1.5rem;
+        margin: 3.75rem 0 0;
+
+
+    }
+
+    .our-pets-title h2 {
+        margin: .125rem 0 0;
+        font-size: 1.5rem;
+        line-height: 2.25rem;
+        width: 22.9375rem;
+        height: 2.25rem;
+    }
+
+    .our-pets-title>div {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .view-more-btn-desktop {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: .5rem;
+        opacity: 1;
+        border-radius: 3.5625rem;
+        align-self: center;
+        border: .0938rem solid #003459;
+        background-color: transparent;
+        font-family: SVN-Gilroy-Meduim;
+        font-weight: 500;
+        width: 9.49rem;
+        height: 2.75rem;
+        padding: .75rem 1.75rem .75rem 1.75rem;
+        font-size: .875rem;
+        line-height: 1.25rem;
+    }
+
+    .pets-lists {
+        display: flex;
+        flex-wrap: wrap;
+        margin: 1.75rem 0 0;
+        gap: 1.25rem;
+    }
+
+    .pets-lists>div {
+        width: 17.5rem;
+        height: 23.625rem;
+    }
+
+    .pets-lists div h3 {
+        font-size: 1rem;
+        line-height: 1.5rem;
+    }
+
+
+    .pet-gene-age {
+        display: flex;
+        align-items: center;
+    }
+
+    .pet-gene-age>span {
+        font-family: "SVN-Gilroy-Bold";
+        display: inline-flex;
+        font-size: 1.2rem;
+        line-height: 1;
+        color: #667479;
+    }
+
+    .pets-lists div h3 {
+        margin-top: 1rem;
+        margin-left: 1rem;
+    }
+
+    .pet-gene,
+    .pet-age,
+    .pet-price {
+        margin-left: 1rem;
+        margin-top: .25rem;
+
+    }
+
+    .pet-price {
+        font-size: .875rem;
+        line-height: 1.25rem;
+    }
+
+    /* ------ Explore Section ------ */
+
+    .explore {
+        flex-direction: row;
+        width: 73.75rem;
+        height: 23.625rem;
+        margin: 3.75rem auto 0;
+        justify-content: space-between;
+
+    }
+
+    .explore-shape1 {
+        width: 48.8933rem;
+        top: -14rem;
+        left: 37.8437rem;
+        transform: rotate(25.23deg);
+        border-radius: 6.1875rem;
+    }
+
+    .explore-shape2 {
+        top: 10.17rem;
+        left: -12.5rem;
+    }
+
+    .explore>div {
+        order: 1;
+        align-items: flex-end;
+        margin-right: 5.3125rem;
+    }
+
+    .explore>div>h2 {
+        font-size: 3.25rem;
+        line-height: 4.25rem;
+        margin: 0;
+    }
+
+    .explore>div>h3 {
+        font-size: 2.25rem;
+        line-height: 3.375rem;
+        margin-top: .125rem;
+    }
+
+    .explore>div>p {
+        margin: .5rem 0 1.5rem;
+    }
+
+    .explore-buttons {
+        gap: 1.25rem;
+        margin-bottom: 0;
+    }
+
+    .explore>img {
+        width: 32.0625rem;
+        height: 21.375rem;
+        margin: 2.25rem 0 0;
+    }
+
+    /* ------ Our Product ------ */
+
+    .products-title>p {
+        margin: 3.75rem 0 0 0;
+    }
+
+
+
+    .products-title>div {
+        display: flex;
+        justify-content: space-between;
+        height: 2.75rem;
+        margin-bottom: 1.75rem;
+    }
+
+    .products-title>div>h2 {
+        font-family: SVN-Gilroy-Bold;
+        font-weight: 700;
+        font-size: 1.5rem;
+
+        line-height: 2.25rem;
+        text-transform: capitalize;
+        color: #003459;
+        margin: .125rem 0 0 0;
+    }
+
+    .products-lists {
+        width: 100%;
+        /* max-width: 73.75rem; */
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1.25rem;
+    }
+
+    .products {
+        display: block;
+        max-width: 73.75rem;
+        margin: 0 auto;
+    }
+
+    .products-lists>div {
+        width: 17.5rem;
+        height: 27.875rem;
+        border-radius: .75rem;
+        padding-top: .5rem .5rem 0 .5rem;
+        gap: .5rem;
+        box-shadow: 0px 4px 28px -2px #00000014;
+    }
+
+    .products-lists>div>img {
+        width: calc(100% - 1rem);
+        height: auto;
+        display: block;
+        object-fit: cover;
+        margin: .5rem .5rem 0 .5rem;
+        border-radius: .625rem;
+
+    }
+
+    .products-lists div h3 {
+        margin: 1rem .5rem 0 1rem;
+        font-family: SVN-Gilroy-Bold;
+        font-weight: 700;
+        font-size: 1rem;
+        line-height: 1.5rem;
+        width: 15.5rem;
+        color: #00171F;
+
+    }
+
+    .product-name-size {
+        display: flex;
+        align-items: center;
+        height: 1.125rem;
+        gap: .7rem;
+    }
+
+    .product-name,
+    .product-size {
+        font-family: SVN-Gilroy-Medium;
+        font-weight: 500;
+        font-size: .75rem;
+        line-height: 1.125rem;
+        color: #667479;
+
+    }
+
+    .product-name {
+        margin: .25rem 0 0 1rem;
+    }
+
+    .product-size {
+        margin: .25rem 0 0 0
+    }
+
+    .product-name span,
+    .product-size span {
+        font-family: SVN-Gilroy-Bold;
+        font-weight: 700;
+        font-size: .75rem;
+        line-height: 1.125rem;
+        color: #667479;
+    }
+
+    .product-price {
+        font-family: SVN-Gilroy-Bold;
+        font-weight: 700;
+        font-size: .875rem;
+        line-height: 1.25rem;
+        margin: .25rem 0 .625rem 1rem;
+    }
+
+
+
+    .product-name-size>span,
+    .product-card>span {
+        font-family: "SVN-Gilroy-Bold";
+        display: inline-flex;
+        font-size: 1.2rem;
+        line-height: 1;
+        color: #667479;
+        margin-bottom: .2188rem;
+    }
+
+    .product-card {
+        display: flex;
+        align-items: center;
+        width: 15.5rem;
+        height: 2.125rem;
+        opacity: 1;
+        border-radius: .5rem;
+        padding: .375rem .625rem .25rem .625rem;
+        gap: .8125rem;
+        background-color: #FCEED5;
+        margin: 0 auto;
+    }
+
+    .product-card>span {
+
+        font-family: "SVN-Gilroy-Bold";
+        display: inline-flex;
+        font-size: 2rem;
+        line-height: 1;
+        color: #003459;
+        margin-bottom: .7rem;
+    }
+
+    .product-card p {
+        font-family: SVN-Gilroy-Bold;
+        font-weight: 700;
+        font-size: .875rem;
+        line-height: 1.25rem;
+        margin: 0;
+    }
+
+    .pet-sellers {
+        display: block;
+    }
+
+    .pet-sellers {
+        display: block;
+    }
+
+    .pet-sellers-title {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 6.25rem;
+    }
+
+    .pet-sellers-title>p {
+        font-family: SVN-Gilroy-Medium;
+        font-weight: 500;
+        font-size: 1rem;
+        line-height: 1.9375rem;
+        color: #000000;
+    }
+
+    .pet-sellers-title>p>span {
+        font-family: SVN-Gilroy-Bold;
+        font-weight: 700;
+        font-size: 1.5rem;
+        line-height: 2.25rem;
+        text-transform: capitalize;
+        color: #003459;
+        margin-left: .25rem;
+    }
+
+    .pet-sellers-btn {
+        width: 12.5625rem;
+    }
+
+    .pet-sellers-logos {
+        display: flex;
+        align-items: center;
+        justify-content: jutyify-between;
+        width: 100%;
+        max-width: 73.75rem;
+        gap: 1.25rem;
+    }
+
+    /* ------ Adoption Section ------ */
+    .adoption {
+        display: block;
+        width: 73.75rem;
+        height: 23.625rem;
+        display: flex;
+        justify-content: space-between;
+        background-color: #FFB775;
+        border-radius: 1.25rem;
+        margin-bottom: 100px;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .adoption>div>h2 {
+        font-family: SVN-Gilroy-Bold;
+        font-weight: 800;
+        font-size: 3.25rem;
+        line-height: 4.25rem;
+        margin: 4rem 0 0 5.3125rem;
+        text-transform: capitalize;
+        color: #003459;
+        position: relative;
+
+    }
+
+    .adoption>div>h3 {
+        font-family: SVN-Gilroy-Bold;
+        font-weight: 700;
+        font-size: 2.25rem;
+        line-height: 3.375rem;
+        text-transform: capitalize;
+        margin: .125rem 0 0 5.3125rem;
+        color: #003459;
+        position: relative;
+    }
+
+    .adoption>div>p {
+        font-family: SVN-Gilroy-Medium;
+        font-weight: 500;
+        font-size: .75rem;
+        line-height: 1.125rem;
+        margin: .5rem 0 0 5.3125rem;
+        position: relative;
+    }
+
+    .adoption > img{
+        position: relative;
+    }
+
+    .adoption-btns {
+        display: flex;
+        gap: 1.25rem;
+        margin-top: 2.625rem;
+        position: relative;
+
+    }
+
+    .adoption-btns>.view-intro-btn {
+        margin: 0;
+    }
+
+    .adoption-btns>.explore-now-btn {
+        margin: 0 0 0 4.5rem;
+    }
+
+    .adoption-shape1 {
+        position: absolute;
+        width: 48.8933rem;
+        height: 39.6875rem;
+        top: -14rem;
+        left: -13.875rem;
+        transform: rotate(154.77deg);
+        border-radius: 6.1875rem;
+        background-color: #FCEED5;
+    }
+
+    .adoption-shape2 {
+        position: absolute;
+        width: 49.2213rem;
+        height: 49.2213rem;
+        top: 169.72px;
+        left: 578.78px;
+        transform: rotate(151.75deg);
+        opacity: 0.3;
+        border-radius: 6.1875rem;
+        background: linear-gradient(102.87deg, #FCEED5 6.43%, #FCEED5 78.33%, #FFE7BA 104.24%);
+
+
+    }
 }

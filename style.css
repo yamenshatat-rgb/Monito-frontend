@@ -92,6 +92,10 @@ nav {
     flex-direction: column;
 }
 
+.header-currency-dropdown{
+    color: var(--primary-darker-color);
+}
+
 .icon-btn {
     display: flex;
     justify-content: center;
@@ -343,6 +347,7 @@ nav {
     line-height: 1.25rem;
     vertical-align: bottom;
     margin: .5rem .75rem 0 .75rem;
+    color: #00171F;
 }
 
 .pet-gene,
@@ -369,6 +374,7 @@ nav {
     font-size: 1rem;
     line-height: 1.5rem;
     margin: .5rem .75rem .25rem .75rem;
+    color: #00171F;
 }
 
 .pets-view-more-btn-mobile {
@@ -694,6 +700,7 @@ footer {
     line-height: 1.5rem;
     background-color: transparent;
     border: none;
+    color: #00171F;
 }
 
 .footer-social-media {

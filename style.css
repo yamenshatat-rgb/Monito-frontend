@@ -427,7 +427,7 @@ nav {
     position: absolute;
     width: 49.2213rem;
     height: 49.2213rem;
-    top: 33.17rem;
+    top: 33.9rem;
     left: -11.1425rem;
     transform: rotate(28.25deg);
     opacity: 1;
@@ -479,7 +479,7 @@ nav {
     line-height: 1.125rem;
     text-align: center;
     color: #242B33;
-    width: 21.51rem;
+        width: 21.39rem;
     margin: .75rem 0 2rem 0;
 }
 
@@ -575,6 +575,7 @@ nav {
     font-size: 1rem;
     line-height: 1.5rem;
     margin: .625rem .625rem 0 1rem;
+    color: #00171F;
 }
 
 .pet-knowledge-info>p {
@@ -584,6 +585,7 @@ nav {
     line-height: 1.25rem;
     margin: .375rem 1rem 1rem 1rem;
     color: #242B33;
+    width: 348px;
     height: 3.75rem;
     overflow: hidden;
     display: -webkit-box;
@@ -1155,6 +1157,7 @@ footer {
     .explore>div>p {
         margin: .5rem 0 1.5rem;
         text-align: right;
+        width: 394px;
     }
 
     .explore-buttons {

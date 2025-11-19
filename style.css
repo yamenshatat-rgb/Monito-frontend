@@ -30,10 +30,25 @@
     --secondary-shape-color: #F7DBA7;
     --muted-color: #667479;
 
+    --secondary-titles-color: #00171F;
+
+    --black: #000000;
+    --muted-black: #242B33;
+    --white: #FFFFFF;
+    --muted-white: #FDFDFD;
+
+    --input-colors: #99A2A5;
+    --badge-color: #00A7E7;
+
+    --secondary-shade-color: #FFE7BA;
+    --adoption-background-color: #FFB775;
+
+    --box-shadow-color: #00000014;
 
     --font-weight-light: 400;
     --font-weight-medium: 500;
     --font-weight-bold: 700;
+    --font-weight-bolder: 800;
 }
 
 body {
@@ -44,15 +59,29 @@ body {
     align-items: center;
 }
 
-/* ------ Header ------ */
+.font-regular {
+    font-family: 'SVN-Gilroy-Regular';
+    font-weight: var(--font-weight-light);
+}
 
+.font-medium {
+    font-family: SVN-Gilroy-Medium;
+    font-weight: var(--font-weight-medium);
+}
+
+.font-bold {
+    font-family: SVN-Gilroy-Bold;
+    font-weight: var(--font-weight-bold);
+}
+
+/* ------ Header ------ */
 header {
     position: relative;
     overflow: hidden;
     padding-top: 2.938rem;
     width: 100%;
     height: 46.688rem;
-    background: linear-gradient(102.87deg, var(--secondary-color) 6.43%, var(--secondary-color) 78.33%, #FFE7BA 104.24%);
+    background: linear-gradient(102.87deg, var(--secondary-color) 6.43%, var(--secondary-color) 78.33%, var(--secondary-shade-color) 104.24%);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -90,10 +119,6 @@ nav {
     position: relative;
     display: flex;
     flex-direction: column;
-}
-
-.header-currency-dropdown{
-    color: var(--primary-darker-color);
 }
 
 .icon-btn {
@@ -136,8 +161,7 @@ nav {
     width: 22.313rem;
     height: 3.75rem;
     margin: 3.2rem 0 0 1rem;
-    font-family: SVN-Gilroy-Bold;
-    font-weight: 800;
+    font-weight: var(--font-weight-bolder);
     font-size: 2.875rem;
     line-height: 3.75rem;
     text-transform: capitalize;
@@ -150,8 +174,6 @@ nav {
     height: 2.375rem;
     padding: 0;
     margin: 0 0 0 1rem;
-    font-family: SVN-Gilroy-Bold;
-    font-weight: var(--font-weight-bold);
     font-size: 1.75rem;
     line-height: 2.375rem;
     text-transform: capitalize;
@@ -162,8 +184,6 @@ nav {
     width: 23.875rem;
     height: 3.375rem;
     margin: .75rem 0 0 1rem;
-    font-family: SVN-Gilroy-Medium;
-    font-weight: var(--font-weight-medium);
     font-size: .75rem;
     line-height: 1.125rem;
 }
@@ -184,8 +204,6 @@ nav {
     border-radius: 3.563rem;
     border: .094rem solid var(--primary-color);
     background-color: transparent;
-    font-family: SVN-Gilroy-Medium;
-    font-weight: var(--font-weight-medium);
     font-size: 1rem;
     line-height: 1.5rem;
     vertical-align: bottom;
@@ -201,14 +219,12 @@ nav {
 }
 
 .explore-now-btn {
-    font-family: "SVN-Gilroy-Medium";
-    font-weight: var(--font-weight-medium);
     width: 10.188rem;
     height: 3rem;
     border-radius: 3.563rem;
     border: none;
     background-color: var(--primary-color);
-    color: #FDFDFD;
+    color: var(--muted-white);
 }
 
 .header-shape1 {
@@ -295,8 +311,6 @@ nav {
 }
 
 .our-pets-title p {
-    font-family: SVN-Gilroy-Medium;
-    font-weight: var(--font-weight-medium);
     font-size: .875rem;
     line-height: 1.25rem;
     margin: 2.5rem 0 0 1rem;
@@ -306,8 +320,6 @@ nav {
 
 .our-pets-title h2 {
     margin: .125rem 0 0 1rem;
-    font-family: SVN-Gilroy-Bold;
-    font-weight: var(--font-weight-bold);
     font-size: 1.25rem;
     line-height: 2rem;
     text-transform: capitalize;
@@ -326,12 +338,12 @@ nav {
 
 .pets-lists>div {
     border-radius: .75rem;
-    box-shadow: 0rem .25rem 1.75rem -0.125rem #00000014;
+    box-shadow: 0rem .25rem 1.75rem -0.125rem var(--box-shadow-color);
     width: 11.5625rem;
     height: 19.8125rem;
 }
 
-.pets-lists>div>div img {
+.pets-lists>div>img {
     width: calc(100% - 1rem);
     height: auto;
     display: block;
@@ -341,19 +353,15 @@ nav {
 }
 
 .pets-lists div h3 {
-    font-family: SVN-Gilroy-Bold;
-    font-weight: var(--font-weight-bold);
     font-size: .875rem;
     line-height: 1.25rem;
     vertical-align: bottom;
     margin: .5rem .75rem 0 .75rem;
-    color: #00171F;
+    color: var(--secondary-titles-color);
 }
 
 .pet-gene,
 .pet-age {
-    font-family: SVN-Gilroy-Medium;
-    font-weight: var(--font-weight-medium);
     font-size: .75rem;
     line-height: 1.125rem;
     margin: .25rem .75rem 0 .75rem;
@@ -362,19 +370,15 @@ nav {
 
 .pet-gene span,
 .pet-age span {
-    font-family: SVN-Gilroy-Bold;
-    font-weight: var(--font-weight-bold);
     line-height: 1.125rem;
     color: var(--muted-color);
 }
 
 .pet-price {
-    font-family: SVN-Gilroy-Bold;
-    font-weight: var(--font-weight-bold);
     font-size: 1rem;
     line-height: 1.5rem;
     margin: .5rem .75rem .25rem .75rem;
-    color: #00171F;
+    color: var(--secondary-titles-color);
 }
 
 .pets-view-more-btn-mobile {
@@ -387,8 +391,6 @@ nav {
     align-self: center;
     border: .0938rem solid var(--primary-color);
     background-color: transparent;
-    font-family: SVN-Gilroy-Medium;
-    font-weight: var(--font-weight-medium);
     width: 23.875rem;
     height: 3rem;
     padding: .875rem 1.75rem .625rem 1.75rem;
@@ -457,8 +459,7 @@ nav {
 
 .explore>div>h2 {
     margin: 2rem 0 0 0;
-    font-family: SVN-Gilroy-Bold;
-    font-weight: 800;
+    font-weight: var(--font-weight-bolder);
     font-size: 2.25rem;
     line-height: 3.375rem;
     text-transform: capitalize;
@@ -466,8 +467,6 @@ nav {
 }
 
 .explore>div>h3 {
-    font-family: SVN-Gilroy-Bold;
-    font-weight: var(--font-weight-bold);
     font-size: 1.5rem;
     line-height: 2.25rem;
     text-transform: capitalize;
@@ -477,13 +476,11 @@ nav {
 }
 
 .explore>div>p {
-    font-family: SVN-Gilroy-Medium;
-    font-weight: var(--font-weight-medium);
     font-size: .75rem;
     line-height: 1.125rem;
     text-align: center;
-    color: #242B33;
-        width: 21.39rem;
+    color: var(--muted-black);
+    width: 21.39rem;
     margin: .75rem 0 2rem 0;
 }
 
@@ -513,18 +510,14 @@ nav {
 
 .pet-knowledge-title>p {
     margin: 0 0 .125rem 0;
-    font-family: SVN-Gilroy-Medium;
-    font-weight: var(--font-weight-medium);
     font-size: .875rem;
     line-height: 1.25rem;
-    color: #000000;
+    color: var(--black);
 
 }
 
 .pet-knowledge-title>div>h2 {
     margin: 0;
-    font-family: SVN-Gilroy-Bold;
-    font-weight: var(--font-weight-bold);
     font-size: 1.25rem;
     line-height: 2rem;
     text-transform: capitalize;
@@ -543,7 +536,7 @@ nav {
     width: 23.875rem;
     height: 26.5rem;
     border-radius: .75rem;
-    box-shadow: 0rem .25rem 1.75rem -0.125rem #00000014;
+    box-shadow: 0rem .25rem 1.75rem -0.125rem var(--box-shadow-color);
 }
 
 .pet-knowledge-lists>div>img {
@@ -565,31 +558,25 @@ nav {
     gap: .625rem;
     border-radius: 1.75rem;
     box-sizing: border-box;
-    font-family: SVN-Gilroy-Bold;
-    font-weight: var(--font-weight-bold);
     font-size: .625rem;
     line-height: 1rem;
-    background-color: #00A7E7;
-    color: #FFFFFF
+    background-color: var(--badge-color);
+    color: var(--white)
 }
 
 .pet-knowledge-info>h3 {
-    font-family: SVN-Gilroy-Bold;
-    font-weight: var(--font-weight-bold);
     font-size: 1rem;
     line-height: 1.5rem;
     margin: .625rem .625rem 0 1rem;
-    color: #00171F;
+    color: var(--secondary-titles-color);
 }
 
 .pet-knowledge-info>p {
-    font-family: SVN-Gilroy-Regular;
-    font-weight: var(--font-weight-light);
     font-size: .875rem;
     line-height: 1.25rem;
     margin: .375rem 1rem 1rem 1rem;
-    color: #242B33;
-    width: 348px;
+    color: var(--muted-black);
+    width: 21.75rem;
     height: 3.75rem;
     overflow: hidden;
     display: -webkit-box;
@@ -607,7 +594,7 @@ footer {
     width: 100%;
     height: 37.375rem;
     border-radius: 1.25rem 1.25rem 0 0;
-    background: linear-gradient(102.87deg, var(--secondary-color) 6.43%, var(--secondary-color) 78.33%, #FFE7BA 104.24%);
+    background: linear-gradient(102.87deg, var(--secondary-color) 6.43%, var(--secondary-color) 78.33%, var(--secondary-shade-color) 104.24%);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -635,12 +622,10 @@ footer {
 
 .footer-register>h2 {
     margin: 0;
-    font-family: SVN-Gilroy-Bold;
-    font-weight: var(--font-weight-bold);
     font-size: 1.25rem;
     line-height: 2rem;
     text-transform: capitalize;
-    color: #FDFDFD;
+    color: var(--muted-white);
 }
 
 .footer-register>section {
@@ -648,7 +633,7 @@ footer {
     height: 8.25rem;
     border-radius: .875rem;
     padding: .75rem;
-    background-color: #FFFFFF;
+    background-color: var(--white);
     box-sizing: border-box;
 }
 
@@ -657,17 +642,15 @@ footer {
     height: 3rem;
     border-radius: .5rem;
     padding-top: .875rem 1.75rem .875rem;
-    border: .0625rem solid #99A2A5;
+    border: .0625rem solid var(--input-colors);
     box-sizing: border-box;
 }
 
 #email::placeholder {
-    font-family: SVN-Gilroy-Medium;
-    font-weight: var(--font-weight-medium);
     font-size: .875rem;
     line-height: 1.25rem;
     padding-left: 1.75rem;
-    color: #99A2A5;
+    color: var(--input-colors);
 }
 
 .footer-subscribe {
@@ -677,9 +660,7 @@ footer {
     border-radius: .5rem;
     padding-top: .875rem 1.75rem .625rem;
     background-color: var(--primary-color);
-    color: #FDFDFD;
-    font-family: SVN-Gilroy-Medium;
-    font-weight: var(--font-weight-medium);
+    color: var(--muted-white);
     font-size: 1rem;
     line-height: 1.5rem;
     border: none;
@@ -694,13 +675,11 @@ footer {
 
 .footer-page-buttons>button {
     height: 1.5rem;
-    font-family: SVN-Gilroy-Medium;
-    font-weight: var(--font-weight-medium);
     font-size: 1rem;
     line-height: 1.5rem;
     background-color: transparent;
     border: none;
-    color: #00171F;
+    color: var(--secondary-titles-color);
 }
 
 .footer-social-media {
@@ -729,16 +708,12 @@ footer {
     display: flex;
     margin: 0 auto;
     gap: .75rem;
-    font-family: SVN-Gilroy-Medium;
-    font-weight: var(--font-weight-medium);
     font-size: .75rem;
     line-height: 1.125rem;
     color: var(--muted-color);
 }
 
 .footer-copyright>p {
-    font-family: SVN-Gilroy-Regular;
-    font-weight: var(--font-weight-light);
     font-size: .625rem;
     line-height: 1rem;
     color: var(--muted-color);
@@ -747,14 +722,14 @@ footer {
 
 
 
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 64rem) {
 
     header {
         padding: 0;
     }
 
     nav {
-        width: 1440px;
+        width: 90rem;
         height: 6.25rem;
         gap: 2.25rem
     }
@@ -776,8 +751,6 @@ footer {
         position: relative;
         display: block;
         z-index: 1;
-        font-family: SVN-Gilroy-Bold;
-        font-weight: var(--font-weight-bold);
         font-size: 1rem;
         line-height: 1.5rem;
         text-decoration: none;
@@ -810,22 +783,18 @@ footer {
         padding-left: 1rem;
         gap: .75rem;
         box-sizing: border-box;
-        background-color: #FDFDFD;
+        background-color: var(--muted-white);
     }
 
     .header-input input::placeholder {
-        font-family: SVN-Gilroy-Medium;
-        font-weight: var(--font-weight-medium);
         font-size: .875rem;
         line-height: 1.25rem;
-        color: #99A2A5
+        color: var(--input-colors);
     }
 
     .header-input input {
         background-color: transparent;
         border: none;
-        font-family: SVN-Gilroy-Medium;
-        font-weight: var(--font-weight-medium);
         font-size: .875rem;
         line-height: 1.25rem;
     }
@@ -850,12 +819,10 @@ footer {
         gap: .625rem;
         border: none;
         background-color: var(--primary-color);
-        font-family: SVN-Gilroy-Bold;
-        font-weight: var(--font-weight-bold);
         font-size: 1rem;
         line-height: 1.5rem;
         vertical-align: bottom;
-        color: #FDFDFD;
+        color: var(--muted-white);
     }
 
     .header-currency-dropdown {
@@ -874,6 +841,10 @@ footer {
 
     .header-currency-flag {
         margin-right: .125rem;
+    }
+
+    .header-currency-code{
+        margin-top: .4rem;
     }
 
     .header-shape1 {
@@ -963,7 +934,7 @@ footer {
 
     .header-hero {
         justify-content: space-between;
-        width: 1440px;
+        width: 90rem;
 
     }
 
@@ -972,8 +943,7 @@ footer {
         height: 4.25rem;
         opacity: 1;
         margin-top: 5rem;
-        font-family: SVN-Gilroy-Bold;
-        font-weight: 800;
+        font-weight: var(--font-weight-bolder);
         font-size: 3.75rem;
         line-height: 4.25rem;
         text-transform: capitalize;
@@ -1059,8 +1029,6 @@ footer {
         align-self: center;
         border: .0938rem solid var(--primary-color);
         background-color: transparent;
-        font-family: SVN-Gilroy-Medium;
-        font-weight: var(--font-weight-medium);
         width: 9.49rem;
         height: 2.75rem;
         padding: .75rem 1.75rem .75rem 1.75rem;
@@ -1092,7 +1060,6 @@ footer {
     }
 
     .pet-gene-age>span {
-        font-family: "SVN-Gilroy-Bold";
         display: inline-flex;
         font-size: 1.2rem;
         line-height: 1;
@@ -1162,7 +1129,7 @@ footer {
     .explore>div>p {
         margin: .5rem 0 1.5rem;
         text-align: right;
-        width: 394px;
+        width: 24.625rem;
     }
 
     .explore-buttons {
@@ -1179,8 +1146,6 @@ footer {
     /* ------ Our Product ------ */
 
     .products-title>p {
-        font-family: SVN-Gilroy-Medium;
-        font-weight: var(--font-weight-medium);
         font-size: 1rem;
         line-height: 1.5rem;
 
@@ -1197,10 +1162,7 @@ footer {
     }
 
     .products-title>div>h2 {
-        font-family: SVN-Gilroy-Bold;
-        font-weight: var(--font-weight-bold);
         font-size: 1.5rem;
-
         line-height: 2.25rem;
         text-transform: capitalize;
         color: var(--primary-color);
@@ -1227,7 +1189,7 @@ footer {
         border-radius: .75rem;
         padding-top: .5rem .5rem 0 .5rem;
         gap: .5rem;
-        box-shadow: 0rem .25rem 1.75rem -0.125rem #00000014;
+        box-shadow: 0rem .25rem 1.75rem -0.125rem var(--box-shadow-color);
     }
 
     .products-lists>div>img {
@@ -1237,18 +1199,14 @@ footer {
         object-fit: cover;
         margin: .5rem .5rem 0 .5rem;
         border-radius: .625rem;
-
     }
 
     .products-lists div h3 {
         margin: 1rem .5rem 0 1rem;
-        font-family: SVN-Gilroy-Bold;
-        font-weight: var(--font-weight-bold);
         font-size: 1rem;
         line-height: 1.5rem;
         width: 15.5rem;
-        color: #00171F;
-
+        color: var(--secondary-titles-color)
     }
 
     .product-name-size {
@@ -1260,12 +1218,9 @@ footer {
 
     .product-name,
     .product-size {
-        font-family: SVN-Gilroy-Medium;
-        font-weight: var(--font-weight-medium);
         font-size: .75rem;
         line-height: 1.125rem;
         color: var(--muted-color);
-
     }
 
     .product-name {
@@ -1278,16 +1233,12 @@ footer {
 
     .product-name span,
     .product-size span {
-        font-family: SVN-Gilroy-Bold;
-        font-weight: var(--font-weight-bold);
         font-size: .75rem;
         line-height: 1.125rem;
         color: var(--muted-color);
     }
 
     .product-price {
-        font-family: SVN-Gilroy-Bold;
-        font-weight: var(--font-weight-bold);
         font-size: .875rem;
         line-height: 1.25rem;
         margin: .25rem 0 .625rem 1rem;
@@ -1297,7 +1248,6 @@ footer {
 
     .product-name-size>span,
     .product-card>span {
-        font-family: "SVN-Gilroy-Bold";
         display: inline-flex;
         font-size: 1.2rem;
         line-height: 1;
@@ -1319,7 +1269,6 @@ footer {
     }
 
     .product-card>span {
-        font-family: "SVN-Gilroy-Bold";
         display: inline-flex;
         font-size: 2rem;
         line-height: 1;
@@ -1328,8 +1277,6 @@ footer {
     }
 
     .product-card p {
-        font-family: SVN-Gilroy-Bold;
-        font-weight: var(--font-weight-bold);
         font-size: .875rem;
         line-height: 1.25rem;
         margin: 0;
@@ -1351,16 +1298,12 @@ footer {
     }
 
     .pet-sellers-title>p {
-        font-family: SVN-Gilroy-Medium;
-        font-weight: var(--font-weight-medium);
         font-size: 1rem;
         line-height: 1.9375rem;
-        color: #000000;
+        color: var(--black);
     }
 
     .pet-sellers-title>p>span {
-        font-family: SVN-Gilroy-Bold;
-        font-weight: var(--font-weight-bold);
         font-size: 1.5rem;
         line-height: 2.25rem;
         text-transform: capitalize;
@@ -1375,7 +1318,7 @@ footer {
     .pet-sellers-logos {
         display: flex;
         align-items: center;
-        justify-content: jutyify-between;
+        justify-content: space-between;
         width: 100%;
         max-width: 73.75rem;
         gap: 1.25rem;
@@ -1390,15 +1333,14 @@ footer {
         height: 23.625rem;
         display: flex;
         justify-content: space-between;
-        background-color: #FFB775;
+        background-color: var(--adoption-background-color);
         border-radius: 1.25rem;
         position: relative;
         overflow: hidden;
     }
 
     .adoption>div>h2 {
-        font-family: SVN-Gilroy-Bold;
-        font-weight: 800;
+        font-weight: var(--font-weight-bolder);
         font-size: 3.25rem;
         line-height: 4.25rem;
         margin: 4rem 0 0 5.3125rem;
@@ -1408,8 +1350,6 @@ footer {
     }
 
     .adoption>div>h3 {
-        font-family: SVN-Gilroy-Bold;
-        font-weight: var(--font-weight-bold);
         font-size: 2.25rem;
         line-height: 3.375rem;
         text-transform: capitalize;
@@ -1419,8 +1359,6 @@ footer {
     }
 
     .adoption>div>p {
-        font-family: SVN-Gilroy-Medium;
-        font-weight: var(--font-weight-medium);
         font-size: .75rem;
         line-height: 1.125rem;
         margin: .5rem 0 0 5.3125rem;
@@ -1466,7 +1404,7 @@ footer {
         transform: rotate(151.75deg);
         opacity: 0.3;
         border-radius: 6.1875rem;
-        background: linear-gradient(102.87deg, var(--secondary-color) 6.43%, var(--secondary-color) 78.33%, #FFE7BA 104.24%);
+        background: linear-gradient(102.87deg, var(--secondary-color) 6.43%, var(--secondary-color) 78.33%, var(--secondary-shade-color) 104.24%);
     }
 
     /* ------ Useful pet knowledge Section ------ */
@@ -1563,7 +1501,6 @@ footer {
     .footer-social-media {
         width: 13.5rem;
         margin: 0;
-
     }
 
     .footer-copyright {
@@ -1574,7 +1511,6 @@ footer {
         width: 73.75rem;
         height: 2.5rem;
         margin: 2.5rem auto;
-
     }
 
     .footer-copyright>img {
@@ -1588,8 +1524,6 @@ footer {
     }
 
     .footer-copyright>p {
-        font-family: SVN-Gilroy-Medium;
-        font-weight: var(--font-weight-medium);
         font-size: .875rem;
         line-height: 1.25rem;
         color: var(--muted-color);
